@@ -10,7 +10,7 @@ const PostHue = (props:Props) => {
     const[color, setColor] = useState('')
 
   return (
-    <div className='flex flex-row justify-evenly gap-8  scrollbar-hide max-h-16'>
+    <div className='flex flex-row justify-evenly gap-8  scrollbar-hide min-h-16'>
 
         <div className='flex flex-col w-full p-4 rounded-lg border-black border gap-4' style={{backgroundColor: color}}>
             <input type="text" name="hue" id="hue" onChange={ (event) => setColor(event.target.value) } />
