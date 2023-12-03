@@ -25,10 +25,10 @@ function App() {
   });
 
   useEffect(() => {
-    fetch('https://greenegunnar.pythonanywhere.com/api/hues/')
+    fetch('sampleData.json')
       .then((res) => res.json())
       .then((data) =>
-        setHues(data.map((item: { hex_code: string }) => ({ ...item, color: item.hex_code })))
+        setHues(data.map((item: { color: string }) => ({ ...item, color: item.color })))
       );
   }, []);
 
