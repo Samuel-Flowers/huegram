@@ -13,7 +13,7 @@ interface Props {
 
 const Main = (props : Props) => {
   return (
-    <div className='flex flex-wrap w-full justify-center gap-8 overflow-y-auto'>
+    <div className='flex flex-wrap w-full justify-center gap-8  p-5 overflow-y-auto hide-scrollbar'>
 
         <PostHue addHue={props.addHue}/>
 
