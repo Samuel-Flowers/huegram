@@ -11,7 +11,8 @@ interface Props {
 
 function getTextColor(backgroundColor:string): string
 {
-  return "black";
+  backgroundColor = "black"
+  return backgroundColor;
 }
 
 const Hue = (props: Props) => {
