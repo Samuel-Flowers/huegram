@@ -4,6 +4,7 @@ import Profile from './components/Profile'
 import { useEffect, useState } from 'react'
 import HueObject from './HueObject'
 
+
 function App() {
 
   const [hues, setHues] = useState<HueObject[]>([]);
@@ -25,15 +26,27 @@ function App() {
   const addNewHue = (color:string ) => 
   {
       console.log(color)
-      const newHue = {color, username: currentUser.username, id: length+1 , likes:0, isLiked: false};
+      const newHue = {color, username: currentUser.username, id: hues.length+1 , likes:0, isLiked: false};
       setHues( [newHue, ...hues ] );
   }
 
+  const toggleLikeForHue = (id?:number) =>
+  {
+    const newHues = [...hues]
+    const hue = newHues.find(h => h.id == id)
+    if(hue){
+      hue.isLiked = !hue.isLiked
+      setHues( newHues )
+    }
+
+    }
+  
   return (
+    
     <div className='flex bg-slate-800 h-screen'>
       {/* <Menu /> */}
 
-      <Main hues={hues} addHue = {addNewHue} />
+      <Main hues={hues} addHue = {addNewHue} toggleLike = {toggleLikeForHue}/>
 
       <Profile />
     </div>
