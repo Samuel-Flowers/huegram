@@ -25,7 +25,7 @@ const Hue = ({hue, toggleLike}: Props) => {
       onClick={()=>toggleLike && toggleLike(hue.id)}
     >
       <div className="flex flex-row text-center gap-2 justify-between items-center bg-black text-white p-2 rounded-b-2xl">
-        <p className={`text-${getTextColor(hue.color)} text-2xl opacity-80`}>{hue.color}</p>
+        <p className={`text-${getTextColor()} text-2xl opacity-80`}>{hue.color}</p>
 
         {/* {hue.isLiked && <span>HEART</span>}
 
