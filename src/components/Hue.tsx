@@ -11,7 +11,7 @@ interface Props {
   toggleLike?:(id?:number) => void;
 }
 
-function getTextColor(backgroundColor:string): string
+function getTextColor(): string
 {
 
   return "black ";
