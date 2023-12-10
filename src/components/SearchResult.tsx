@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const SearchResult = ({result}: {result: any}) => {
+export const SearchResult = ({result}: {result: { color: string }}) => {
   return (
-    <div>{result.color}</div>
+    <div>{(result as { color: string }).color}</div>
   )
 }
