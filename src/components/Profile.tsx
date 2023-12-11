@@ -1,26 +1,47 @@
 import kaylee from '/kaylee.jpg'
+import React, { useEffect, useState } from 'react'
 import './Profile.css' 
+import Likes from './Likes'
+import HuesPosted from './HuesPosted'
   
+interface UserData {
+  id: number;
+  color: string;
+  username: string;
+}
+
 const Profile = () => {
+
+    const [data, setData] = useState<UserData[]>([]); // Add type annotation for data state variable
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await fetch('sampleData.json');
+          const jsonData = await response.json();
+          setData(jsonData);
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      };
+  
+      fetchData();
+    }, []);
   return (
     <div className='flex flex-col border-2 border-black p-8 items-center text-white w-96'>
 
+      <div className="palette">
+        {data
+          .filter((item) => item.username === 'addison') // Filter based on username
+          .map((item) => (
+            <div key={item.id} style={{ backgroundColor: item.color }}></div>
+          ))}
+      </div>
 
-        <div className="palette">
-
-         <div style={{backgroundColor:'#ff2299'}}></div>
-         <div style={{backgroundColor:'#ee2299'}}></div>
-         <div style={{backgroundColor:'#dd2299'}}></div>
-         <div style={{backgroundColor:'#cc2299'}}></div>
-         <div style={{backgroundColor:'#bb2299'}}></div>
-         
-        </div>
-
-        <h1>@kodom</h1>
+        <h1>@addison</h1>
         <div className="flex flex-col items-center gap-10 w-1/2">
             <img src={kaylee} alt="" className='rounded-full'/>
-            <h1>Likes: 48</h1>
-            <h1>Likes: 49</h1>
+            <Likes/>
+            <HuesPosted/>
         </div>
 
     </div>

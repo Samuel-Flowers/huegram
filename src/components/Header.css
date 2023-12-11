@@ -1,0 +1,51 @@
+body {
+    background-color: #f0f0f0; /* Set the background color as needed */
+  }
+  
+  .search-container {
+    position: relative;
+  }
+  
+  .input-wrapper {
+    position: relative;
+  }
+  
+  #searchInput {
+    padding: 8px;
+    color: #fff; /* Text color */
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+  
+  .search-icon {
+    color: #fff; /* Icon color */
+    margin-right: 8px;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 200px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .input-wrapper:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .result {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .result:hover {
+    background-color: #f0f0f0;
+  }
+  

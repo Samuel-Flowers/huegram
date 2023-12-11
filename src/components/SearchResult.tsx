@@ -1,7 +1,7 @@
-
+import './Header.css' 
 
 export const SearchResult = ({result}: {result: { color: string }}) => {
   return (
-    <div>{(result as { color: string }).color}</div>
+    <div className="result" >{(result as { color: string }).color}</div>
   )
 }

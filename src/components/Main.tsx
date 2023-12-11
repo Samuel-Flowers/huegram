@@ -1,7 +1,6 @@
 import HueObject from '../HueObject'
 import Hue from './Hue'
 import PostHue from './PostHue'
-import Header from './Header'
 
 
 interface Props {
@@ -13,7 +12,6 @@ interface Props {
 const Main = ({hues, addHue, toggleLike} : Props) => {
   return (
     <div className='flex flex-wrap w-full justify-center gap-8 overflow-y-auto hide-scrollbar'>
-      <Header />
       <div className='p-5 flex flex-wrap w-full justify-center gap-8 overflow-y-auto hide-scrollbar'>
         <PostHue addHue={addHue}/>
 
