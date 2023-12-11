@@ -1,5 +1,5 @@
 import kaylee from '/kaylee.jpg'
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import './Profile.css' 
 import Likes from './Likes'
 import HuesPosted from './HuesPosted'
