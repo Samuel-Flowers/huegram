@@ -12,7 +12,7 @@ interface Props {
 const Main = ({hues, addHue, toggleLike} : Props) => {
   return (
     <div className='flex flex-wrap w-full justify-center gap-8 overflow-y-auto hide-scrollbar'>
-      <div className='p-5 flex flex-wrap w-full justify-center gap-8 overflow-y-auto hide-scrollbar'>
+      <div className='p-10 flex flex-wrap w-full justify-center gap-8 overflow-y-auto hide-scrollbar'>
         <PostHue addHue={addHue}/>
 
 

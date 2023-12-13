@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import './Header.css'
+
 
 interface Color {
   color: string;
@@ -38,7 +38,7 @@ export const SearchBar = ({ setResults }: { setResults: (results: Color[]) => vo
   };
 
   return (
-    <div className='input-wrapper text-white'>
+    <div className=' text-white'>
       <FontAwesomeIcon icon={faSearch} className="search-icon text-white" />
       <input
         type="text"
@@ -46,7 +46,7 @@ export const SearchBar = ({ setResults }: { setResults: (results: Color[]) => vo
         placeholder="lookup color..."
         value={searchTerm}
         onChange={(e) => handleChange(e.target.value)}
-        className="focus:outline-none focus:border-none bg-transparent text-white pl-8"
+        className="focus:outline-none placeholder:text-white focus:border-none bg-transparent text-white pl-8"
       />
     </div>
   );

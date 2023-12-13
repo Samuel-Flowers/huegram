@@ -32,8 +32,9 @@ const HuePosts: React.FC = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Hues Posted: {counter}</h1>
+    <div className='flex flex-col items-center text-2xl'>
+      <h1>Hues</h1>
+      <h1>{counter}</h1>
     </div>
   );
 };

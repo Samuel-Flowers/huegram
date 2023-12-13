@@ -27,7 +27,7 @@ const Profile = () => {
       fetchData();
     }, []);
   return (
-    <div className='flex flex-col border-2 border-black p-8 items-center text-white w-96'>
+    <div className='flex  flex-col bg-gradient-to-br from-[#1e293b] via-[#1e456e] to-[#1e587b] border-l-2 border-white p-7 items-center text-white w-56'>
 
       <div className="palette">
         {data
@@ -37,8 +37,8 @@ const Profile = () => {
           ))}
       </div>
 
-        <h1>@addison</h1>
-        <div className="flex flex-col items-center gap-10 w-1/2">
+        <h1 className='text-xl my-4'>@addison</h1>
+        <div className="flex flex-col items-center gap-6 w-1/2">
             <img src={kaylee} alt="" className='rounded-full'/>
             <Likes/>
             <HuesPosted/>

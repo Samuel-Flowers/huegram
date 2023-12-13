@@ -1,4 +1,4 @@
-import './Header.css' 
+
 
 export const SearchResult = ({result}: {result: { color: string }}) => {
   return (
